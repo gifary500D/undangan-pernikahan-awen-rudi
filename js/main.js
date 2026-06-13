@@ -184,21 +184,24 @@ return;
 }
 
 const text =
-`Assalamu'alaikum
+"Assalamu'alaikum\n\n" +
+"Saya " + nama + " ingin menyampaikan ucapan:\n\n" +
+pesan +
+"\n\nSemoga menjadi keluarga yang sakinah, mawaddah, warahmah.";
 
-Saya *${nama}* ingin menyampaikan ucapan:
+const nomorWA = "6281260609351";
 
-${pesan}
+const url =
+"https://wa.me/" +
+nomorWA +
+"?text=" +
+encodeURIComponent(text);
 
-Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. 🤍`;
+console.log(url);
 
-const nomorWA = "6281260609351"; 
-
-window.open(
-`https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`,
-'_blank'
-);
+window.location.href = url;
 }
+
 
 
 /* ===================================================
